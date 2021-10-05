@@ -1,0 +1,342 @@
+.vs-section {
+  background: $green;
+  position: relative;
+  text-align: center;
+  color: $blue;
+  overflow: hidden;
+
+  .vs-text {
+    @extend %h1;
+    color: $white;
+    font-size: 3.5rem;
+    position: relative;
+    padding-top: 40px;
+  }
+
+  .img-left, .img-right {
+    position: relative;
+  }
+
+  .img-wrapper {
+    display: inline-block;
+    position: relative;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .text-wrapper {
+    margin-top: 30px;
+  }
+
+  .accent-1, .accent-2, .accent-3,
+  .accent-l1, .accent-l2, .accent-l3, .accent-l4,
+  .accent-r1, .accent-r2, .accent-r3 {
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+  }
+
+  .accent-1 {
+    height: 68px;
+    width: 100%;
+    top: 14%;
+    left: 0;
+    background-color: $green;
+    background-image: url('images/accents/steps-accent2.png');
+    background-blend-mode: multiply;
+    background-position: 0 0;
+    background-size: auto;
+  }
+
+  .accent-2 {
+    height: 68px;
+    width: 100%;
+    top: calc(14% + 68px);
+    left: 0;
+    background-image: url('images/accents/steps-accent2.png');
+    background-position: 165px 0;
+    background-size: auto;
+  }
+
+  .accent-3 {
+    height: 75px;
+    width: 75px;
+    top: -10px;
+    left: 50%;
+    background-image: url('images/accents/vs-accent3.svg');
+    transform: translateX(-50%);
+    margin-left: -90px;
+  }
+
+  .accent-l1, .accent-r1 {
+    height: 45vw;
+    width: 35vw;
+    height: 40%;
+    width: 150px;
+    top: 60%;
+    transform: translateY(-50%);
+    margin-top: -60px;
+    background-color: $green;
+    background-image: url('images/accents/vs-accent1.jpg');
+    background-blend-mode: multiply;
+  }
+
+  .accent-l2, .accent-r2 {
+    height: 45vw;
+    width: 35vw;
+    height: 40%;
+    width: 150px;
+    top: 60%;
+    transform: translateY(-50%);
+    margin-top: -30px;
+    background: $white;
+  }
+
+  .accent-l3, .accent-r3 {
+    height: 45vw;
+    width: 35vw;
+    height: 40%;
+    width: 150px;
+    top: 60%;
+    transform: translateY(-50%);
+    background-image: url('images/accents/video-accent2.png');
+  }
+
+  .accent-l1 {
+    left: 0;
+  }
+
+  .accent-l2 {
+    left: 30px;
+  }
+
+  .accent-l3 {
+    left: 60px;
+  }
+
+  .accent-l4 {
+    height: 150px;
+    width: 150px;
+    top: 0;
+    left: -20px;
+    transform: rotate(45deg);
+    background-image: url('images/accents/vs-accent2.svg');
+  }
+
+  .accent-r1 {
+    right: 0;
+  }
+
+  .accent-r2 {
+    right: 30px;
+  }
+
+  .accent-r3 {
+    right: 60px;
+  }
+
+  @include media-breakpoint-only(sm) {
+    .vs-text {
+      font-size: 2rem;
+    }
+
+    .accent-3 {
+      height: 60px;
+      width: 60px;
+      margin-left: -50px;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .accent-1 {
+      animation: vsGlitch 15s cubic-bezier(0.000, 1.140, 0.000, 0.985) both infinite;
+    }
+    .accent-2 {
+      animation: vsGlitch2 25s cubic-bezier(0.000, 1.140, 0.000, 0.985) reverse both infinite;
+    }
+
+    .img-wrapper {
+      img  {
+        max-height: 55vh;
+      }
+    }
+
+    .vs-text {
+      padding-top: 15vh;
+    }
+
+    .text-wrapper {
+      margin-top: 2vh;
+    }
+
+    .accent-3 {
+      top: 9vh;
+    }
+
+    .accent-l4 {
+      left: auto;
+      right: 20vh;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .accent-l1, .accent-l2 {
+      left: 40%;
+      margin-left: 0;
+    }
+
+    .accent-r1, .accent-r2 {
+      right: 40%;
+      margin-right: 0;
+    }
+
+    .accent-l1, .accent-l2,
+    .accent-r1, .accent-r2 {
+      margin-top: 0;
+      transition-duration: .3s;
+    }
+
+    .accent-l1 {
+      &.vis {
+        margin-left: -30px;
+        margin-top: -30px;
+      }
+      &.vis2 {
+        margin-left: -60px;
+        margin-top: -60px;
+      }
+    }
+
+    .accent-l2 {
+      &.vis {
+        margin-left: -30px;
+        margin-top: -30px;
+      }
+    }
+
+    .accent-l3 {
+      left: 40%;
+    }
+
+    .accent-l4 {
+      transform: rotate(0deg);
+      transition-duration: .3s;
+
+      &.vis {
+        transform: rotate(45deg);
+      }
+    }
+
+    .accent-r1 {
+      &.vis {
+        margin-right: -30px;
+        margin-top: -30px;
+      }
+      &.vis2 {
+        margin-right: -60px;
+        margin-top: -60px;
+      }
+    }
+
+    .accent-r2 {
+      &.vis {
+        margin-right: -30px;
+        margin-top: -30px;
+      }
+    }
+
+    .accent-r3 {
+      right: 40%;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    .accent-l1, .accent-l2, .accent-l3 {
+      left: 52%;
+    }
+
+    .accent-r1, .accent-r2, .accent-r3 {
+      right: 52%;
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-height: 767px) {
+    .img-wrapper {
+      img  {
+        max-height: 460px;
+      }
+    }
+    .vs-text {
+      padding-top: 130px;
+    }
+
+    .accent-3 {
+      top: 80px;
+    }
+
+    .accent-l4 {
+      right: 150px;
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    .img-left img {
+      transform: translateX(-20%);
+    }
+    .img-right img {
+      transform: translateX(20%);
+    }
+  }
+}
+
+
+@keyframes vsGlitch {
+    0% {
+        background-position: 0 0;
+    }
+    1% {
+        background-position: 15px 0;
+    }
+    2% {
+        background-position: 0 0;
+    }
+    60% {
+        background-position: 0 0;
+    }
+    61% {
+        background-position: -10px 0;
+    }
+    62% {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 0;
+    }
+}
+
+
+@keyframes vsGlitch2 {
+    0% {
+        background-position: 165px 0;
+    }
+    1% {
+        background-position: 155px 0;
+    }
+    2% {
+        background-position: 165px 0;
+    }
+    60% {
+        background-position: 165px 0;
+    }
+    61% {
+        background-position: 170px 0;
+    }
+    62% {
+        background-position: 165px 0;
+    }
+    to {
+        background-position: 165px 0;
+    }
+}

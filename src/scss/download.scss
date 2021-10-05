@@ -1,0 +1,491 @@
+// Desktop
+$cubeSize: 25vw;
+$translateZ: calc(#{$cubeSize} / 2);
+
+// Tablet
+$cubeSizeTablet: 18vw;
+$translateZTablet: calc(#{$cubeSizeTablet} / 2);
+
+// Mobile
+$cubeSizeMobile: 50vw;
+$translateZMobile: calc(#{$cubeSizeMobile} / 2);
+
+//Large Screen
+$cubeSizeMax: 425px;
+$translateZMax: calc(#{$cubeSizeMax} / 2);
+
+.dl-section {
+  background-color: $cyan;
+  position: relative;
+  color: $blue;
+  z-index: 10;
+  text-shadow: none;
+  height: auto;
+  .center-container {
+    @include media-breakpoint-down(lg) {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 0;
+    }
+  }
+  .dl-text {
+    position: relative;
+    z-index: 30;
+    @include media-breakpoint-down(lg) {
+      font-size: 1rem;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-top: 8rem;
+      text-align: center;
+    }
+  }
+
+  .dl-accents {
+  -webkit-transform: translateZ(-1000px);
+    z-index: 1;
+    position: absolute;
+    padding-top: 50%;
+    margin-left: auto;
+    width: 100%;
+    left: 0;
+    top: 0;
+    @include media-breakpoint-down(lg) {
+      left: 7vw;
+      top: -60%;
+      width: calc(100% - 7vw);
+    }
+    @include media-breakpoint-down(sm) {
+      left: 0;
+      top: -10%;
+      width: 100%;
+    }
+    & > div {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      padding-top: 28%;
+      width: 42%;
+      @include media-breakpoint-down(sm) {
+        padding-top: 40%;
+        width: 64%;
+      }
+      &:before, &:after {
+        content: '';
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        display: block;
+        height: 100%; width: 100%;
+        top: 0; left: 0;
+      }
+      &:first-child {
+        top: 30%;
+        left: 0;
+        @include media-breakpoint-down(sm) {
+          top: 0;
+        }
+        &:after {
+          background-image: url('images/accents/dl-accent1.png');
+          animation: glitch 10s cubic-bezier(0.000, 1.140, 0.000, 0.985) both infinite;
+        }
+        &:before {
+          background-image: url('images/accents/dl-accent4.png');
+          animation: glitch3 10s cubic-bezier(0.000, 1.140, 0.000, 0.985) both infinite;
+          animation-direction: alternate;
+        }
+      }
+      &:last-child {
+        bottom: 0;
+        left: 15%;
+        @include media-breakpoint-down(lg) {
+          bottom: -10%;
+          left: 9%;
+        }
+        @include media-breakpoint-down(sm) {
+          bottom: -20%;
+        }
+        &:after {
+          background-image: url('images/accents/dl-accent2.png');
+          animation: glitch2 10s cubic-bezier(0.000, 1.140, 0.000, 0.985) both infinite;
+        }
+        &:before {
+          background-image: url('images/accents/dl-accent3.png');
+          animation: glitch3 10s cubic-bezier(0.000, 1.140, 0.000, 0.985) both infinite;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    .dl-img-wrapper {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      z-index: 20;
+    }
+  }
+
+  .dl-img-wrapper {
+    @include media-breakpoint-up(md) {
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        width: 100%;
+        z-index: 20;
+    }
+    @include media-breakpoint-up(xl) {
+        top: 5vh;
+    }
+    @media only screen and (min-width: 768px) and (max-height: 600px) {
+        top: 50px;
+    }
+  }
+}
+
+@keyframes glitch {
+    0% {
+        transform: translatex(0)
+    }
+    1% {
+        transform: translatex(40px)
+    }
+    2% {
+        transform: translatex(0)
+    }
+    34% {
+      transform: translatex(0)
+    }
+    35% {
+      transform: translatex(-10px)
+    }
+    36% {
+      transform: translatex(0)
+    }
+    to {
+        transform: translatex(0)
+    }
+}
+@keyframes glitch2 {
+    0% {
+        transform: translatex(0)
+    }
+    1% {
+        transform: translatex(-20px)
+    }
+    2% {
+        transform: translatex(0)
+    }
+    60% {
+      transform: translatex(0)
+    }
+    61% {
+      transform: translatex(30px)
+    }
+    62% {
+      transform: translatex(0)
+    }
+    to {
+        transform: translatex(0)
+    }
+}
+@keyframes glitch3 {
+    0% {
+        transform: translateY(0)
+    }
+    1% {
+        transform: translateY(-20px)
+    }
+    2% {
+        transform: translateY(0)
+    }
+    60% {
+      transform: translateY(0)
+    }
+    61% {
+      transform: translateY(30px)
+    }
+    62% {
+      transform: translateY(0)
+    }
+    to {
+        transform: translateY(0)
+    }
+}
+#cubeShadow {
+  z-index: 1;
+  background-color: $black;
+  opacity: .2;
+  filter: blur(30px);
+  width: calc(#{$cubeSize} * 1.2);
+  height: calc(#{$cubeSize} * 1.2);
+  position: absolute;
+  bottom: -58%;
+  right: 22%;
+  transform-origin: center;
+  transform: rotateX(117deg) rotateY(1079deg) rotateZ(34deg);
+  @include media-breakpoint-up(xl) {
+    width: calc(#{$cubeSizeMax} * 1.3);
+    height: calc(#{$cubeSizeMax} * 1.3);
+  }
+  @include media-breakpoint-down(lg) {
+    width: calc(#{$cubeSizeTablet} * 1.2);
+    height: calc(#{$cubeSizeTablet} * 1.2);
+  }
+  @include media-breakpoint-down(sm) {
+    width: calc(#{$cubeSizeMobile} * 1.2);
+    height: calc(#{$cubeSizeMobile} * 1.2);
+    bottom: -68%;
+    transform: rotateX(132deg) rotateY(1079deg) rotateZ(34deg);
+  }
+}
+
+#dl-cube-wrapper {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  margin-bottom: 1rem;
+  margin-top: 7rem;
+  perspective: calc(#{$cubeSize} * 4.25);
+	perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+  * {
+    transform-style: inherit !important;
+  }
+  @include media-breakpoint-down(lg) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .cube {
+   position: relative;
+   margin: 0 auto;
+   height: $cubeSize;
+   width: $cubeSize;
+   transform-style: preserve-3d;
+   transform: rotateX(127deg) rotateY(1133deg) rotateZ(7deg);
+   @include media-breakpoint-up(xl) {
+     height: $cubeSizeMax;
+     width: $cubeSizeMax;
+   }
+   @include media-breakpoint-down(lg) {
+     height: $cubeSizeTablet;
+     width: $cubeSizeTablet;
+   }
+   @include media-breakpoint-down(sm) {
+     height: $cubeSizeMobile;
+     width: $cubeSizeMobile;
+   }
+   & > div {
+     position: absolute;
+     height: $cubeSize;
+     width: $cubeSize;
+     touch-callout: none;
+     user-select: none;
+     justify-content: center;
+     align-items: center;
+     @include media-breakpoint-up(xl) {
+       height: $cubeSizeMax;
+       width: $cubeSizeMax;
+     }
+     @include media-breakpoint-down(lg) {
+       height: $cubeSizeTablet;
+       width: $cubeSizeTablet;
+     }
+     @include media-breakpoint-down(sm) {
+       height: $cubeSizeMobile;
+       width: $cubeSizeMobile;
+     }
+     &:hover, &:active {
+      cursor: pointer;
+     }
+     &:first-child {
+       transform: rotateX(90deg) translateZ($translateZ);
+       @include media-breakpoint-up(xl) {
+         transform: rotateX(90deg) translateZ($translateZMax);
+       }
+       @include media-breakpoint-down(lg) {
+         transform: rotateX(90deg) translateZ($translateZTablet);
+       }
+       @include media-breakpoint-down(sm) {
+         transform: rotateX(90deg) translateZ($translateZMobile);
+       }
+     }
+     &:nth-child(2) {
+       transform: translateZ($translateZ);
+       @include media-breakpoint-up(xl) {
+         transform: translateZ($translateZMax);
+       }
+       @include media-breakpoint-down(lg) {
+         transform: translateZ($translateZTablet);
+       }
+       @include media-breakpoint-down(sm) {
+         transform: translateZ($translateZMobile);
+       }
+     }
+     &:nth-child(3) {
+       transform: rotateY(90deg) translateZ($translateZ);
+       @include media-breakpoint-up(xl) {
+         transform: rotateY(90deg) translateZ($translateZMax);
+       }
+       @include media-breakpoint-down(lg) {
+         transform: rotateY(90deg) translateZ($translateZTablet);
+       }
+       @include media-breakpoint-down(sm) {
+         transform: rotateY(90deg) translateZ($translateZMobile);
+       }
+     }
+     &:nth-child(4) {
+       transform: rotateY(180deg) translateZ($translateZ);
+       @include media-breakpoint-up(xl) {
+         transform: rotateY(180deg) translateZ($translateZMax);
+       }
+       @include media-breakpoint-down(lg) {
+         transform: rotateY(180deg) translateZ($translateZTablet);
+       }
+       @include media-breakpoint-down(sm) {
+         transform: rotateY(180deg) translateZ($translateZMobile);
+       }
+     }
+     &:nth-child(5) {
+       transform: rotateY(-90deg) translateZ($translateZ);
+       @include media-breakpoint-up(xl) {
+         transform: rotateY(-90deg) translateZ($translateZMax);
+       }
+       @include media-breakpoint-down(lg) {
+         transform: rotateY(-90deg) translateZ($translateZTablet);
+       }
+       @include media-breakpoint-down(sm) {
+         transform: rotateY(-90deg) translateZ($translateZMobile);
+       }
+     }
+     &:nth-child(6) {
+       transform: rotateX(-90deg) rotate(180deg) translateZ($translateZ);
+       @include media-breakpoint-up(xl) {
+         transform: rotateX(-90deg) rotate(180deg) translateZ($translateZMax);
+       }
+       @include media-breakpoint-down(lg) {
+         transform: rotateX(-90deg) rotate(180deg) translateZ($translateZTablet);
+       }
+       @include media-breakpoint-down(sm) {
+         transform: rotateX(-90deg) rotate(180deg) translateZ($translateZMobile);
+       }
+     }
+     & > div.cube-image {
+       width: $cubeSize;
+       height: $cubeSize;
+       transform: rotate(180deg);
+       position: relative;
+       overflow: hidden;
+       &::after {
+         content: '';
+         display: block;
+         position: absolute;
+         height: 20%;
+         width: 20%;
+         background-image: url('images/vs.png');
+         background-size: contain;
+         background-repeat: no-repeat;
+         top: 50%; left: 50%;
+         transform: translate(-50%, -50%);
+       }
+       @include media-breakpoint-up(xl) {
+         height: $cubeSizeMax;
+         width: $cubeSizeMax;
+       }
+       @include media-breakpoint-down(lg) {
+         height: $cubeSizeTablet;
+         width: $cubeSizeTablet;
+       }
+       @include media-breakpoint-down(sm) {
+         height: $cubeSizeMobile;
+         width: $cubeSizeMobile;
+       }
+         &.single img {
+           position: absolute;
+           top: 0; bottom: 0; left: 0; right: 0;
+           height: 100%;
+           width: 100%;
+           @include object-fit('cover');
+           pointer-events: none;
+         }
+         &.split img {
+           @include object-fit('cover');
+           pointer-events: none;
+           height: 100%;
+           width: 50%;
+           top: 0; bottom: 0;
+           position: absolute;
+           &:first-child {
+             left: 0; right: 50%;
+           }
+           &:last-child {
+             right: 0; left: 50%;
+           }
+         }
+      }
+    }
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+   /* IE10+ CSS */
+   #dl-cube-wrapper {
+     #cubeShadow {
+       display: none;
+     }
+     .cube {
+       transform: rotate(0) !important;
+       & > div {
+         transform: rotate(175deg) !important;
+         &:not(:first-child) {
+           display: none !important;
+         }
+       }
+     }
+   }
+}
+
+@supports (-ms-accelerator:true) {
+   /* IE Edge 12+ CSS */
+   #dl-cube-wrapper {
+     .cube {
+       transform: rotate(0) !important;
+       & > div {
+         transform: rotate(175deg) !important;
+         &:not(:first-child) {
+           display: none !important;
+         }
+       }
+     }
+   }
+}
+@supports (-ms-ime-align:auto) {
+    /* IE Edge 16+ CSS */
+    #dl-cube-wrapper {
+      .cube {
+        transform: rotate(0) !important;
+        & > div {
+          transform: rotate(175deg) !important;
+          &:not(:first-child) {
+            display: none !important;
+          }
+        }
+      }
+    }
+}
+
+#dl-cube-wrapper {
+	transform-style: preserve-3d;
+}
+#dl-cube-wrapper * {
+	transform-style: inherit !important;
+}
+
+.dl-section .container-fluid {
+ -webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}

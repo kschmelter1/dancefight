@@ -1,0 +1,362 @@
+.stars-section {
+  background-color: $yellow;
+  background-image: url('images/bkgd3_flat.gif');
+  // Squish background to make fade work right
+  background-size: 100% 100%;
+  color: $blue;
+  overflow: hidden;
+  .img-wrapper {
+    position: relative;
+    img {
+      position: relative;
+    }
+  }
+
+  .stars-holder, .lightning-bolts-holder {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform-origin: 50% 10%;
+    opacity: 0;
+  }
+
+  .fadeIn {
+    opacity: 1;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .fadeOut {
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .scaleDown {
+    animation: 1.25s infinite normal scaleDown;
+  }
+
+  .scaleReset {
+    transform: scale(1);
+  }
+
+  .rotateRight {
+    animation: 1s ease 1 normal forwards rotateRight;
+  }
+
+  .rotateFast {
+    animation: 1s linear infinite forwards rotateFast;
+  }
+
+  .rotateReset {
+    transform: rotate(0deg);
+  }
+
+  @keyframes scaleDown {
+    0% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+  }
+
+  @keyframes rotateRight {
+    0% { transform: rotate(20deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+  @keyframes rotateFast {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+  .accent-1, .accent-2, .accent-3, .accent-4, .accent-5, .accent-6, .accent-7, .accent-8 {
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    transform-origin: 50% 50%;
+  }
+
+  .accent-1 {
+    height: 30px;
+    width: 30px;
+    top: -10%;
+    left: 40%;
+    transform: rotate(15deg);
+    background-image: url('images/accents/star-red.svg');
+  }
+
+  .accent-2 {
+    height: 60px;
+    width: 70px;
+    top: -8%;
+    left: 25%;
+    background-image: url('images/accents/lb-white.svg');
+  }
+
+  .accent-3 {
+    height: 60px;
+    width: 55px;
+    top: -7%;
+    right: 16%;
+    background-image: url('images/accents/lb-red.svg');
+  }
+
+  .accent-4, .accent-5 {
+    background-image: url('images/accents/star-pink.svg');
+  }
+
+  .accent-4 {
+    height: 50px;
+    width: 50px;
+    top: 0;
+    left: 18%;
+    transform: rotate(-15deg);
+  }
+
+  .accent-5 {
+    height: 26px;
+    width: 26px;
+    top: 25%;
+    left: 22%;
+    transform: translateY(-350%);
+  }
+
+  .accent-6 {
+    height: 50px;
+    width: 75px;
+    top: 45%;
+    left: 16%;
+    transform: translateY(-100%);
+    background-image: url('images/accents/lb-blue.svg');
+  }
+
+  .accent-7 {
+    height: 90px;
+    width: 65px;
+    top: 48%;
+    right: 18%;
+    transform: translateY(-70%);
+    background-image: url('images/accents/lb-pink.svg');
+  }
+
+  .accent-8 {
+    height: 65px;
+    width: 65px;
+    bottom: 28%;
+    right: 22%;
+    transform: rotate(10deg);
+    background-image: url('images/accents/star-blue.svg');
+  }
+
+
+  @include media-breakpoint-only(sm) {
+    .accent-1 {
+      height: 25px;
+      width: 25px;
+      top: -15%;
+    }
+
+    .accent-2 {
+      height: 60px;
+      width: 50px;
+      left: 28%;
+      top: -10%;
+    }
+
+    .accent-3 {
+      height: 60px;
+      width: 42px;
+      top: -8%;
+    }
+
+    .accent-4 {
+      height: 35px;
+      width: 35px;
+      left: 22%;
+    }
+
+    .accent-5 {
+      height: 18px;
+      width: 18px;
+      left: 26%;
+      transform: translateY(-400%);
+    }
+
+    .accent-6 {
+      height: 36px;
+      width: 60px;
+      left: 12%;
+      transform: translateY(-120%);
+    }
+
+    .accent-7 {
+      height: 70px;
+      width: 55px;
+      right: 20%;
+    }
+
+    .accent-8 {
+      height: 40px;
+      width: 40px;
+      bottom: 28%;
+      right: 25%;
+    }
+  }
+
+
+  @include media-breakpoint-up(md) {
+    .img-wrapper {
+      margin-bottom: -10vh;
+    }
+
+    .accent-1 {
+      height: 40px;
+      width: 40px;
+      top: -20%;
+      left: 50%;
+    }
+
+    .accent-2 {
+      height: 90px;
+      width: 80px;
+      top: -15%;
+      left: 25%;
+    }
+
+    .accent-3 {
+      height: 90px;
+      width: 65px;
+      top: -15%;
+      right: 15%;
+    }
+
+    .accent-4 {
+      height: 50px;
+      width: 50px;
+      top: 0;
+      left: 18%;
+    }
+
+    .accent-5 {
+      height: 26px;
+      width: 26px;
+      top: 25%;
+      left: 22%;
+    }
+
+    .accent-6 {
+      height: 60px;
+      width: 85px;
+      top: 50%;
+      left: 11%;
+    }
+
+    .accent-7 {
+      height: 120px;
+      width: 75px;
+      top: 50%;
+      right: 15%;
+    }
+
+    .accent-8 {
+      height: 65px;
+      width: 65px;
+      bottom: 28%;
+      right: 22%;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .accent-1 {
+      top: -15%;
+    }
+
+    .accent-2 {
+      top: -10%;
+      left: 27%;
+    }
+
+    .accent-3 {
+      top: -10%;
+      right: 16%;
+    }
+
+    .accent-5 {
+      transform: translateY(-500%);
+    }
+
+    .accent-6 {
+      left: 15%;
+      transform: translateY(-150%);
+    }
+
+    .accent-7 {
+      right: 18%;
+      transform: translateY(-90%);
+    }
+
+    .accent-8 {
+      top: 8%;
+      right: 0;
+    }
+  }
+
+  @media only screen and (min-width: 1500px) {
+    .accent-1 {
+      height: 60px;
+      width: 60px;
+    }
+
+    .accent-2 {
+      height: 140px;
+      width: 120px;
+      top: -5%;
+    }
+
+    .accent-3 {
+      height: 130px;
+      width: 105px;
+      top: -8%;
+      right: 18%;
+    }
+
+    .accent-4 {
+      height: 70px;
+      width: 70px;
+      top: 5%;
+      left: 20%;
+    }
+
+    .accent-5 {
+      height: 36px;
+      width: 36px;
+    }
+
+    .accent-6 {
+      height: 100px;
+      width: 125px;
+      transform: translateY(-120%);
+    }
+
+    .accent-7 {
+      height: 160px;
+      width: 115px;
+      right: 20%;
+      transform: translateY(-110%);
+    }
+
+    .accent-8 {
+      height: 80px;
+      width: 80px;
+      right: 8%;
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 991px) and (min-height: 801px) and (max-height: 1500px) {
+    .img-wrapper {
+      margin-bottom: -5vh;
+    }
+  }
+}

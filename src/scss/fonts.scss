@@ -1,0 +1,88 @@
+// Custom fonts go here.
+
+@import url("https://fast.fonts.net/lt/1.css?apiType=css&c=8a6eb5c2-e4ce-4b0d-b4d1-eea3a69411f9&fontids=5664093,5664098,5664103,5664107,5664111,5664149");
+@font-face{
+    font-family:"Helvetica Neue";
+    font-weight: 400;
+    src:url("fonts/5664093/522972a6-5867-47ae-82fc-a7cf9bd5d4d4.eot?#iefix");
+    src:url("fonts/5664093/522972a6-5867-47ae-82fc-a7cf9bd5d4d4.eot?#iefix") format("eot"),url("fonts/5664093/08b57253-2e0d-4c12-9c57-107f6c67bc49.woff2") format("woff2"),url("fonts/5664093/08edde9d-c27b-4731-a27f-d6cd9b01cd06.woff") format("woff"),url("fonts/5664093/8f4a1705-214a-4dd0-80b8-72252c37e688.ttf") format("truetype");
+}
+@font-face{
+    font-family:"Helvetica Neue";
+    font-weight: 400;
+    font-style: italic;
+    src:url("fonts/5664098/c708845d-fe72-4432-9276-47c4f91aec1c.eot?#iefix");
+    src:url("fonts/5664098/c708845d-fe72-4432-9276-47c4f91aec1c.eot?#iefix") format("eot"),url("fonts/5664098/4bd56f95-e7ab-4a32-91fd-b8704cbd38bc.woff2") format("woff2"),url("fonts/5664098/4fe1c328-1f21-434a-8f0d-5e0cf6c70dfb.woff") format("woff"),url("fonts/5664098/c07fd9e2-5e0b-4297-9229-af0c8e331d94.ttf") format("truetype");
+}
+@font-face{
+    font-family:"Helvetica Neue";
+    font-weight: 500;
+    src:url("fonts/5664103/5640036d-d549-4f16-b31e-87da78d9e832.eot?#iefix");
+    src:url("fonts/5664103/5640036d-d549-4f16-b31e-87da78d9e832.eot?#iefix") format("eot"),url("fonts/5664103/240c57a0-fdce-440d-9ce3-85e0cb56f470.woff2") format("woff2"),url("fonts/5664103/7802e576-2ffa-4f22-a409-534355fbea79.woff") format("woff"),url("fonts/5664103/14d824a2-2a5c-4692-8e30-74f6e177b675.ttf") format("truetype");
+}
+@font-face{
+    font-family:"Helvetica Neue";
+    font-weight: 500;
+    font-style: italic;
+    src:url("fonts/5664107/46116ca7-5e49-4a08-9af4-07e7182ce7fd.eot?#iefix");
+    src:url("fonts/5664107/46116ca7-5e49-4a08-9af4-07e7182ce7fd.eot?#iefix") format("eot"),url("fonts/5664107/de68be2a-5d0e-4b8d-b3eb-940f75503e2a.woff2") format("woff2"),url("fonts/5664107/31029e78-79a0-4940-b82d-2e3c238e1355.woff") format("woff"),url("fonts/5664107/a8860880-ef55-430f-b420-eccd71f67b19.ttf") format("truetype");
+}
+@font-face{
+    font-family:"Helvetica Neue";
+    font-weight: 700;
+    src:url("fonts/5664149/9697cfef-7816-47cc-81ed-c56c029d3bcf.eot?#iefix");
+    src:url("fonts/5664149/9697cfef-7816-47cc-81ed-c56c029d3bcf.eot?#iefix") format("eot"),url("fonts/5664149/1f4274cd-2674-481e-9023-69e33ffca161.woff2") format("woff2"),url("fonts/5664149/5e8d493c-be01-44b9-962e-504a5cf10dd8.woff") format("woff"),url("fonts/5664149/ae36b4a0-aa2c-46cc-98d8-d8b7d22241dc.ttf") format("truetype");
+}
+@font-face{
+    font-family:"Helvetica Neue";
+    font-weight: 700;
+    font-style: italic;
+    src:url("fonts/5664111/ae7ba1a5-8e73-4170-81ae-a7d26629e728.eot?#iefix");
+    src:url("fonts/5664111/ae7ba1a5-8e73-4170-81ae-a7d26629e728.eot?#iefix") format("eot"),url("fonts/5664111/13ab58b4-b5ba-4c95-afde-ab2608fbbbd9.woff2") format("woff2"),url("fonts/5664111/5018b5b5-c821-4653-bc74-d0b11d735f1a.woff") format("woff"),url("fonts/5664111/c20f44a1-784c-4d3f-8d7f-aee889b6a7ae.ttf") format("truetype");
+}
+
+/*
+        This font software is the property of Commercial Type.
+
+        You may not modify the font software, use it on another website, or install it on a computer.
+
+        License information is available at http://commercialtype.com/eula
+        For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+
+        Copyright (C) 2019 Schwartzco Inc.
+        License: 1906-MPTMBL
+*/
+
+
+@font-face {
+  font-family: 'Druk Wide Web';
+  src: url('fonts/DrukWide-Heavy-Web.woff2') format('woff2'),
+       url('fonts/DrukWide-Heavy-Web.woff') format('woff');
+  font-weight:  800;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+.DrukWide-Heavy-Web {
+  font-family: 'Druk Wide Web';
+  font-weight:  800;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+
+@font-face {
+  font-family: 'Druk Wide Web';
+  src: url('fonts/DrukWide-Bold-Web.woff2') format('woff2'),
+       url('fonts/DrukWide-Bold-Web.woff') format('woff');
+  font-weight:  700;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+.DrukWide-Bold-Web {
+  font-family: 'Druk Wide Web';
+  font-weight:  700;
+  font-style:   normal;
+  font-stretch: normal;
+}

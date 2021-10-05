@@ -1,0 +1,88 @@
+.main-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+
+  .header-logo {
+    max-width: 60px;
+    padding: 15px 0;
+    display: block;
+  }
+
+  .social-nav {
+    list-style-type: none;
+    padding: 0;
+    font-size: 18px;
+    line-height: 32px;
+    margin-bottom: 0;
+
+    li {
+      display: inline-block;
+    }
+
+    a {
+      @extend .fab;
+      width: 32px;
+      height: 32px;
+      overflow: hidden;
+      display: block;
+      margin: 0 10px;
+      color: $yellow;
+      background: $blue;
+      border-radius: 50%;
+
+      &:hover, &:focus {
+        background: $cyan;
+        color: $blue;
+      }
+
+      &:before {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        text-align: center;
+        line-height: 32px;
+      }
+    }
+
+
+    li {
+      &:first-child {
+        a {
+          margin-left: 0;
+        }
+      }
+      &:last-child {
+        a {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .facebook-link a {
+      @extend .fa-facebook-f;
+    }
+
+    .twitter-link a {
+      @extend .fa-twitter;
+    }
+
+    .instagram-link a {
+      @extend .fa-instagram;
+      font-size: 20px
+    }
+
+    .youtube-link a {
+      @extend .fa-youtube;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .header-logo {
+      padding: 25px 0;
+      max-width: 300px;
+    }
+  }
+}
